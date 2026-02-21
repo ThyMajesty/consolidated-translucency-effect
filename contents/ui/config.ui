@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>CTEConfig</class>
+        <widget class="QWidget" name="CTEConfig">
+        <property name="windowTitle"><string>Consolidated Translucency Effect</string></property>
+        <layout class="QVBoxLayout" name="mainLayout">
+            <!-- Global -->
+            <item>
+                <widget class="QGroupBox" name="globalGroup">
+                    <property name="title">
+                        <string>Global Opacity</string>
+                    </property>
+                    <layout class="QFormLayout" name="globalForm">
+                        <item column="0" row="0">
+                            <widget class="QLabel" name="globalActiveLabel">
+                                <property name="text">
+                                    <string>Active:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="0">
+                            <widget class="QSlider" name="kcfg_GlobalActive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="0" row="1">
+                            <widget class="QLabel" name="globalInactiveLabel">
+                                <property name="text">
+                                    <string>Inactive:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="1">
+                            <widget class="QSlider" name="kcfg_GlobalInactive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+            </item>
+            <!-- Fullscreen -->
+            <item>
+                <widget class="QGroupBox" name="kcfg_FullscreenEnabled">
+                    <property name="title">
+                        <string>Fullscreen</string>
+                    </property>
+                    <property name="checkable">
+                        <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                    <layout class="QFormLayout" name="fullscreenForm">
+                        <item column="0" row="0">
+                            <widget class="QLabel" name="fullscreenOverrideLabel">
+                                <property name="text">
+                                    <string>Override globals:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="0">
+                            <widget class="QCheckBox" name="kcfg_FullscreenOverride"/>
+                        </item>
+                        <item column="0" row="1">
+                            <widget class="QLabel" name="fullscreenActiveLabel">
+                                <property name="text">
+                                    <string>Active:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="1">
+                            <widget class="QSlider" name="kcfg_FullscreenActive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="value">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="0" row="2">
+                            <widget class="QLabel" name="fullscreenInactiveLabel">
+                                <property name="text">
+                                    <string>Inactive:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="2">
+                            <widget class="QSlider" name="kcfg_FullscreenInactive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="value">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+            </item>
+            <!-- Dialogs -->
+            <item>
+                <widget class="QGroupBox" name="kcfg_DialogsEnabled">
+                    <property name="title">
+                        <string>Dialogs</string>
+                    </property>
+                    <property name="checkable">
+                        <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                    <layout class="QFormLayout" name="dialogsForm">
+                        <item column="0" row="0">
+                            <widget class="QLabel" name="dialogsOverrideLabel">
+                                <property name="text">
+                                    <string>Override globals:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="0">
+                            <widget class="QCheckBox" name="kcfg_DialogsOverride"/>
+                        </item>
+                        <item column="0" row="1">
+                            <widget class="QLabel" name="dialogsActiveLabel">
+                                <property name="text">
+                                    <string>Active:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="1">
+                            <widget class="QSlider" name="kcfg_DialogsActive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="0" row="2">
+                            <widget class="QLabel" name="dialogsInactiveLabel">
+                                <property name="text">
+                                    <string>Inactive:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="2">
+                            <widget class="QSlider" name="kcfg_DialogsInactive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+            </item>
+            <!-- Menus -->
+            <item>
+                <widget class="QGroupBox" name="kcfg_MenusEnabled">
+                    <property name="title">
+                        <string>Menus</string>
+                    </property>
+                    <property name="checkable">
+                        <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                        <bool>false</bool>
+                    </property>
+                    <layout class="QFormLayout" name="menusForm">
+                        <item column="0" row="0">
+                            <widget class="QLabel" name="menusOverrideLabel">
+                                <property name="text">
+                                    <string>Override globals:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="0">
+                            <widget class="QCheckBox" name="kcfg_MenusOverride"/>
+                        </item>
+                        <item column="0" row="1">
+                            <widget class="QLabel" name="menusActiveLabel">
+                                <property name="text">
+                                    <string>Active:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="1">
+                            <widget class="QSlider" name="kcfg_MenusActive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="0" row="2">
+                            <widget class="QLabel" name="menusInactiveLabel">
+                                <property name="text">
+                                    <string>Inactive:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="2">
+                            <widget class="QSlider" name="kcfg_MenusInactive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+            </item>
+            <!-- Notifications -->
+            <item>
+                <widget class="QGroupBox" name="kcfg_NotificationsEnabled">
+                    <property name="title">
+                        <string>Notifications</string>
+                    </property>
+                    <property name="checkable">
+                        <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                        <bool>false</bool>
+                    </property>
+                    <layout class="QFormLayout" name="notificationsForm">
+                        <item column="0" row="0">
+                            <widget class="QLabel" name="notificationsOverrideLabel">
+                                <property name="text">
+                                    <string>Override globals:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="0">
+                            <widget class="QCheckBox" name="kcfg_NotificationsOverride"/>
+                        </item>
+                        <item column="0" row="1">
+                            <widget class="QLabel" name="notificationsActiveLabel">
+                                <property name="text">
+                                    <string>Active:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="1">
+                            <widget class="QSlider" name="kcfg_NotificationsActive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="0" row="2">
+                            <widget class="QLabel" name="notificationsInactiveLabel">
+                                <property name="text">
+                                    <string>Inactive:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="2">
+                            <widget class="QSlider" name="kcfg_NotificationsInactive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+            </item>
+            <!-- Move/Resize -->
+            <item>
+                <widget class="QGroupBox" name="kcfg_MoveResizeEnabled">
+                    <property name="title">
+                        <string>Moving / Resizing</string>
+                    </property>
+                    <property name="checkable">
+                        <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                    <layout class="QFormLayout" name="moveResizeForm">
+                        <item column="0" row="0">
+                            <widget class="QLabel" name="moveResizeOverrideLabel">
+                                <property name="text">
+                                    <string>Override globals:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="0">
+                            <widget class="QCheckBox" name="kcfg_MoveResizeOverride"/>
+                        </item>
+                        <item column="0" row="1">
+                            <widget class="QLabel" name="moveResizeOpacityLabel">
+                                <property name="text">
+                                    <string>Opacity:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="1">
+                            <widget class="QSlider" name="kcfg_MoveResizeOpacity">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="value">
+                                    <number>80</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+            </item>
+            <!-- Dock -->
+            <item>
+                <widget class="QGroupBox" name="kcfg_DockEnabled">
+                    <property name="title">
+                        <string>Dock / Panel</string>
+                    </property>
+                    <property name="checkable">
+                        <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                        <bool>false</bool>
+                    </property>
+                    <layout class="QFormLayout" name="dockForm">
+                        <item column="0" row="0">
+                            <widget class="QLabel" name="dockOverrideLabel">
+                                <property name="text">
+                                    <string>Override globals:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="0">
+                            <widget class="QCheckBox" name="kcfg_DockOverride"/>
+                        </item>
+                        <item column="0" row="1">
+                            <widget class="QLabel" name="dockActiveLabel">
+                                <property name="text">
+                                    <string>Active:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="1">
+                            <widget class="QSlider" name="kcfg_DockActive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="0" row="2">
+                            <widget class="QLabel" name="dockInactiveLabel">
+                                <property name="text">
+                                    <string>Inactive:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="2">
+                            <widget class="QSlider" name="kcfg_DockInactive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+            </item>
+            <!-- Desktop -->
+            <item>
+                <widget class="QGroupBox" name="kcfg_DesktopEnabled">
+                    <property name="title">
+                        <string>Desktop</string>
+                    </property>
+                    <property name="checkable">
+                        <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                        <bool>false</bool>
+                    </property>
+                    <layout class="QFormLayout" name="desktopForm">
+                        <item column="0" row="0">
+                            <widget class="QLabel" name="desktopOverrideLabel">
+                                <property name="text">
+                                    <string>Override globals:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="0">
+                            <widget class="QCheckBox" name="kcfg_DesktopOverride"/>
+                        </item>
+                        <item column="0" row="1">
+                            <widget class="QLabel" name="desktopActiveLabel">
+                                <property name="text">
+                                    <string>Active:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="1">
+                            <widget class="QSlider" name="kcfg_DesktopActive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="0" row="2">
+                            <widget class="QLabel" name="desktopInactiveLabel">
+                                <property name="text">
+                                    <string>Inactive:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="2">
+                            <widget class="QSlider" name="kcfg_DesktopInactive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+            </item>
+            <!-- Unmanaged -->
+            <item>
+                <widget class="QGroupBox" name="kcfg_UnmanagedEnabled">
+                    <property name="title">
+                        <string>Unmanaged (windowType = -1)</string>
+                    </property>
+                    <property name="checkable">
+                        <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                        <bool>false</bool>
+                    </property>
+                    <layout class="QFormLayout" name="unmanagedForm">
+                        <item column="0" row="0">
+                            <widget class="QLabel" name="unmanagedOverrideLabel">
+                                <property name="text">
+                                    <string>Override globals:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="0">
+                            <widget class="QCheckBox" name="kcfg_UnmanagedOverride"/>
+                        </item>
+                        <item column="0" row="1">
+                            <widget class="QLabel" name="unmanagedActiveLabel">
+                                <property name="text">
+                                    <string>Active:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="1">
+                            <widget class="QSlider" name="kcfg_UnmanagedActive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="0" row="2">
+                            <widget class="QLabel" name="unmanagedInactiveLabel">
+                                <property name="text">
+                                    <string>Inactive:</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item column="1" row="2">
+                            <widget class="QSlider" name="kcfg_UnmanagedInactive">
+                                <property name="minimum">
+                                    <number>10</number>
+                                </property>
+                                <property name="maximum">
+                                    <number>100</number>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="tickPosition">
+                                    <enum>QSlider::TicksBelow</enum>
+                                </property>
+                                <property name="tickInterval">
+                                    <number>10</number>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+            </item>
+            <!-- Exempt list -->
+            <item>
+                <widget class="QGroupBox" name="exemptGroup">
+                    <property name="title">
+                        <string>Exempt Windows (resourceClass, one per line)</string>
+                    </property>
+                    <layout class="QVBoxLayout">
+                        <item>
+                            <widget class="QPlainTextEdit" name="kcfg_ExemptList">
+                                <property name="placeholderText">
+                                    <string>Godot
+steam
+                                    </string>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+            </item>
+            <item>
+                <spacer name="verticalSpacer">
+                    <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                    </property>
+                </spacer>
+            </item>
+        </layout>
+    </widget>
+    <resources/>
+    <connections>
+        <!-- Fullscreen override toggles sliders -->
+        <connection>
+            <sender>kcfg_FullscreenOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_FullscreenActive</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+        <connection>
+            <sender>kcfg_FullscreenOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_FullscreenInactive</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+        <!-- Dialogs override toggles sliders -->
+        <connection>
+            <sender>kcfg_DialogsOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_DialogsActive</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+        <connection>
+            <sender>kcfg_DialogsOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_DialogsInactive</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+        <!-- Menus override toggles sliders -->
+        <connection>
+            <sender>kcfg_MenusOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_MenusActive</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+        <connection>
+            <sender>kcfg_MenusOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_MenusInactive</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+        <!-- Notifications override toggles sliders -->
+        <connection>
+            <sender>kcfg_NotificationsOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_NotificationsActive</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+        <connection>
+            <sender>kcfg_NotificationsOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_NotificationsInactive</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+        <!-- MoveResize override toggles slider -->
+        <connection>
+            <sender>kcfg_MoveResizeOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_MoveResizeOpacity</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+        <!-- Dock override toggles sliders -->
+        <connection>
+            <sender>kcfg_DockOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_DockActive</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+        <connection>
+            <sender>kcfg_DockOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_DockInactive</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+        <!-- Desktop override toggles sliders -->
+        <connection>
+            <sender>kcfg_DesktopOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_DesktopActive</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+        <connection>
+            <sender>kcfg_DesktopOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_DesktopInactive</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+        <!-- Unmanaged override toggles sliders -->
+        <connection>
+            <sender>kcfg_UnmanagedOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_UnmanagedActive</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+        <connection>
+            <sender>kcfg_UnmanagedOverride</sender>
+            <signal>toggled(bool)</signal>
+            <receiver>kcfg_UnmanagedInactive</receiver>
+            <slot>setEnabled(bool)</slot>
+        </connection>
+    </connections>
+</ui>

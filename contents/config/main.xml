@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name=""/>
+    <group name="">
+        <!-- Global -->
+        <entry name="GlobalActive" type="Int"><default>97</default></entry>
+        <entry name="GlobalInactive" type="Int"><default>87</default></entry>
+
+        <!-- Fullscreen -->
+        <entry name="FullscreenEnabled" type="Bool"><default>true</default></entry>
+        <entry name="FullscreenOverride" type="Bool"><default>false</default></entry>
+        <entry name="FullscreenActive" type="Int"><default>100</default></entry>
+        <entry name="FullscreenInactive" type="Int"><default>100</default></entry>
+
+        <!-- Dialogs -->
+        <entry name="DialogsEnabled" type="Bool"><default>true</default></entry>
+        <entry name="DialogsOverride" type="Bool"><default>false</default></entry>
+        <entry name="DialogsActive" type="Int"><default>97</default></entry>
+        <entry name="DialogsInactive" type="Int"><default>87</default></entry>
+
+        <!-- Menus -->
+        <entry name="MenusEnabled" type="Bool"><default>false</default></entry>
+        <entry name="MenusOverride" type="Bool"><default>false</default></entry>
+        <entry name="MenusActive" type="Int"><default>97</default></entry>
+        <entry name="MenusInactive" type="Int"><default>87</default></entry>
+
+        <!-- Notifications -->
+        <entry name="NotificationsEnabled" type="Bool"><default>false</default></entry>
+        <entry name="NotificationsOverride" type="Bool"><default>false</default></entry>
+        <entry name="NotificationsActive" type="Int"><default>97</default></entry>
+        <entry name="NotificationsInactive" type="Int"><default>87</default></entry>
+
+        <!-- Moving/Resizing -->
+        <entry name="MoveResizeEnabled" type="Bool"><default>true</default></entry>
+        <entry name="MoveResizeOverride" type="Bool"><default>false</default></entry>
+        <entry name="MoveResizeOpacity" type="Int"><default>80</default></entry>
+
+        <!-- Dock -->
+        <entry name="DockEnabled" type="Bool"><default>false</default></entry>
+        <entry name="DockOverride" type="Bool"><default>false</default></entry>
+        <entry name="DockActive" type="Int"><default>97</default></entry>
+        <entry name="DockInactive" type="Int"><default>87</default></entry>
+
+        <!-- Desktop -->
+        <entry name="DesktopEnabled" type="Bool"><default>false</default></entry>
+        <entry name="DesktopOverride" type="Bool"><default>false</default></entry>
+        <entry name="DesktopActive" type="Int"><default>97</default></entry>
+        <entry name="DesktopInactive" type="Int"><default>87</default></entry>
+
+        <!-- Unmanaged -->
+        <entry name="UnmanagedEnabled" type="Bool"><default>false</default></entry>
+        <entry name="UnmanagedOverride" type="Bool"><default>false</default></entry>
+        <entry name="UnmanagedActive" type="Int"><default>97</default></entry>
+        <entry name="UnmanagedInactive" type="Int"><default>87</default></entry>
+
+        <!-- Exempt list -->
+        <entry name="ExemptList" type="String"><default></default></entry>
+    </group>
+</kcfg>
