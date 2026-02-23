@@ -198,7 +198,7 @@ class ConsolidatedTranslucencyEffect {
 
     onMoveResizeStart(win) {
         const c = this.cfg.MoveResize;
-        if (!c.enabled) return;
+        if (!c.enabled || this.isExempt(win)) return;
         const opacity = c.override ? c.opacity : this.cfg.GlobalInactive;
         this.cancelOpacity(win);
         win.cteOpacityId = set({
