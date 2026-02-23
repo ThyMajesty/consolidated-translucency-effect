@@ -136,7 +136,8 @@ class ConsolidatedTranslucencyEffect {
     }
 
     isExempt(win) {
-        return this.cfg.ExemptList.some(r => r.test(win.windowClass));
+        const parts = win.windowClass.split(" ");
+        return this.cfg.ExemptList.some(r => parts.some(p => r.test(p)));
     }
 
     cancelOpacity(win) {
